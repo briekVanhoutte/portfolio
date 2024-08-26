@@ -3,6 +3,7 @@ body {
     margin: 0;
     padding: 0;
 }
+
 .navbar {
     background-color: #343a40;
     padding: 1rem;
@@ -10,54 +11,141 @@ body {
     justify-content: space-between;
     align-items: center;
     color: white;
+    flex-wrap: wrap; /* Allows the navbar items to wrap on smaller screens */
 }
+
 .navbar a {
     color: white;
     text-decoration: none;
     padding: 0.5rem;
 }
+
 .navbar a:hover {
     text-decoration: underline;
 }
+
 .header {
     background-color: #007bff;
     color: white;
     text-align: center;
     padding: 5rem 1rem;
 }
+
 .container {
     max-width: 960px;
     margin: 0 auto;
     padding: 1rem;
 }
+
 .about,
 .contact {
     padding: 2rem 0;
     text-align: center;
 }
+
 .about img {
     border-radius: 50%;
+    max-width: 100%; /* Ensure the image scales down on smaller screens */
+    height: auto; /* Maintain aspect ratio */
 }
+
 .footer {
     background-color: #343a40;
     color: white;
     text-align: center;
     padding: 1rem 0;
 }
+
 .internship,
 .projects {
     padding: 2rem 0;
     text-align: center;
 }
+
 .card {
     margin-bottom: 2rem;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     padding: 1rem;
     text-align: left;
+    background-color: #f9f9f9;
+    border-radius: 8px;
 }
 
 .profile-img {
     width: 150px;
     height: 150px;
     object-fit: cover;
+    max-width: 100%; /* Make the profile image responsive */
+    height: auto;
+}
+
+.internship .card {
+    margin-bottom: 2rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 1.5rem;
+    text-align: left;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+}
+
+.internship h3 {
+    color: #007bff;
+    margin-bottom: 1rem;
+}
+
+.internship p {
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+}
+
+.internship a {
+    color: #007bff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.internship a:hover {
+    text-decoration: underline;
+}
+
+.internship-img {
+    width: 100%;
+    max-width: 100px; /* Control the maximum size of the image */
+    height: auto;
+    margin-bottom: 1rem;
+    border-radius: 8px;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .header {
+        padding: 3rem 1rem; /* Reduce padding on smaller screens */
+    }
+
+    .container {
+        padding: 1rem; /* Adjust container padding for smaller screens */
+    }
+
+    .navbar {
+        flex-direction: column; /* Stack navbar items vertically on small screens */
+        text-align: center; /* Center the navbar items */
+    }
+
+    .card {
+        text-align: center; /* Center text inside cards on smaller screens */
+    }
+
+    .internship .card {
+        text-align: center; /* Center text inside internship cards on smaller screens */
+    }
+
+    .profile-img {
+        width: 120px; /* Slightly reduce profile image size on small screens */
+        margin: 0 auto 1rem auto; /* Center the profile image */
+    }
+
+    .internship-img {
+        max-width: 80px; /* Reduce size of internship images on small screens */
+    }
 }
