@@ -117,6 +117,15 @@ body {
     border-radius: 8px;
 }
 
+.project-img {
+    width: 100%;
+    max-width: 300px; /* Control the maximum size of the image */
+    height: auto;
+    margin-bottom: 1rem;
+    border-radius: 8px;
+}
+
+
 /* Responsive Styles */
 @media (max-width: 768px) {
     .header {
